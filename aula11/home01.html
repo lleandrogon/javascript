@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where are you from?</title>
+</head>
+<body>
+    Você nasceu no(a) <h1>Você é brasileiro ou estrangeiro?</h1>
+    <input type="text" name="txtpais" id="itxtpais">
+    <input type="button" value="Verificar" onclick="ver()">
+    <div id="res">
+       
+    </div>
+    <script>
+        function ver() {
+            var txtp = window.document.querySelector('input#itxtpais')
+            res = window.document.querySelector('div#res')
+            var txt = txtp.value
+            res.innerHTML = `Naturalidade: ${txt}`
+            if (txt != 'Brasil') {
+                res.innerHTML += `<p>Você é estrangeiro</p>`
+            } else {
+                res.innerHTML += `<p>Você é brasileiro</p>`
+            }
+        }
+    </script>
+</body>
+</html>
